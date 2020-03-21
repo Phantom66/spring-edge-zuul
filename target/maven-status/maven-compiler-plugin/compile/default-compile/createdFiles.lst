@@ -1,0 +1,6 @@
+com/edge/filter/StickySessionRule.class
+com/edge/SpringEdgeZuulApplication.class
+com/edge/filter/RouteFilter.class
+com/edge/filter/PostFilterProxy.class
+com/edge/filter/PreFilterProxy.class
+com/edge/filter/ErrorFilter.class
