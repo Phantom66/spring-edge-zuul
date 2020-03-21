@@ -8,18 +8,18 @@ ribbon:
   ConnectTimeout: 6000
   ReadTimeout: 3000
   SocketTimeout: 6000
-  NFLoadBalancerRuleClassName: com.edge.filter.StickySessionRule
+  #NFLoadBalancerRuleClassName: com.edge.filter.StickySessionRule //comenté esto
   
 zuul:
-  #ignoredServices: '*'
+  ignoredServices: '*'
   routes:
     greetings:
       path: /estudiante/**
       serviceId: web-estudiante
       stripPrefix: false
-      url: http://localhost:2222/
+      #url: http://localhost:2222/ qutié esto
 
-#web-estudiante.ribbon.NFLoadBalancerRuleClassName: com.edge.filter.StickySessionRule
+web-estudiante.ribbon.NFLoadBalancerRuleClassName: com.edge.filter.StickySessionRule
 
 # Discovery Server Access
 eureka:
